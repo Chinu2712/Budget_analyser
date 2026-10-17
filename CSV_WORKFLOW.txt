@@ -1,0 +1,261 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    BUDGET ANALYSER - CSV EXPORT WORKFLOW                   ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         STEP 1: ADD TRANSACTIONS                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Option 1: Add Transaction
+    ↓
+    Enter Category (e.g., "Food")
+    ↓
+    Enter Amount (e.g., 500)
+    ↓
+    Enter Month (e.g., "2026-10")
+    ↓
+    ✓ Transaction added. Its ID is 1
+    
+    ┌─ STORED IN MEMORY ─┐
+    │ transactions = [   │
+    │   {                │
+    │     "id": 1,       │
+    │     "category":    │
+    │       "Food",      │
+    │     "amount": 500, │
+    │     "month":       │
+    │       "2026-10"    │
+    │   }                │
+    │ ]                  │
+    └────────────────────┘
+    
+    ⚠️ NOTE: Data is only in RAM (memory)
+              Will be lost when program closes!
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                  STEP 2: GENERATE MONTHLY REPORT WITH CSV                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Option 7: Generate Monthly Report (text)
+    ↓
+    Enter Month (e.g., "2026-10")
+    ↓
+    ╔════════════════════════════════════════╗
+    ║  DISPLAY ON SCREEN (OPTION 7 ONLY)   ║
+    ║                                        ║
+    ║  Monthly Report for 2026-10            ║
+    ║  Monthly budget: Rs. 10000.0           ║
+    ║  Total spent: Rs. 500.0                ║
+    ║  Money remaining: Rs. 9500.0           ║
+    ║  Status: Within budget                 ║
+    ║  Spending by category:                 ║
+    ║  Food: Rs. 500.0                       ║
+    ║                                        ║
+    ║  Generating CSV report...              ║
+    ║  CSV report saved as:                  ║
+    ║    Monthly_Report_2026-10.csv          ║
+    ║  File location:                        ║
+    ║    C:\...\Monthly_Report_2026-10.csv   ║
+    ╚════════════════════════════════════════╝
+    
+    ↓↓↓ CSV FILE CREATED ↓↓↓
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         STEP 3: CSV FILE CREATED                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    FILE SAVED TO DISK:
+    ┌─────────────────────────────────────────────────────┐
+    │  budget_nav/                                        │
+    │  ├── Budget analyser (1).py                         │
+    │  ├── CODE_EXPLANATION.md                            │
+    │  ├── BUG_FIXES.md                                   │
+    │  ├── CSV_EXPORT_GUIDE.md                            │
+    │  │                                                  │
+    │  └── Monthly_Report_2026-10.csv  ← NEW FILE!        │
+    │                                                      │
+    │      File Contents:                                 │
+    │      ─────────────────────                          │
+    │      MONTHLY BUDGET REPORT                          │
+    │      Month,2026-10                                  │
+    │      Monthly Budget (Rs.),10000                     │
+    │                                                      │
+    │      TRANSACTIONS                                   │
+    │      ID,Category,Amount (Rs.),Month                 │
+    │      1,Food,500,2026-10                             │
+    │                                                      │
+    │      SUMMARY                                        │
+    │      Total Spent (Rs.),500                          │
+    │      Money Remaining (Rs.),9500                     │
+    │      Status,Within Budget                           │
+    │                                                      │
+    │      SPENDING BY CATEGORY                           │
+    │      Category,Amount (Rs.)                          │
+    │      Food,500                                       │
+    └─────────────────────────────────────────────────────┘
+
+    ✅ File is PERMANENT (saved to disk)
+    ✅ Data is NOT lost when program closes
+    ✅ Can be opened anytime
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      STEP 4: OPEN CSV IN EXCEL                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    OPTION A: Double-click the file
+    ┌────────────────────────────────────────┐
+    │ Monthly_Report_2026-10.csv             │
+    │ (double-click)                         │
+    │         ↓                              │
+    │ (automatically opens in Excel)         │
+    │         ↓                              │
+    │ ┌──────────────────────────────────┐  │
+    │ │ MONTHLY BUDGET REPORT            │  │
+    │ │ Month          2026-10           │  │
+    │ │ Budget         10000             │  │
+    │ │                                  │  │
+    │ │ Transaction List                 │  │
+    │ │ ID  Category  Amount    Month    │  │
+    │ │ 1   Food      500       2026-10  │  │
+    │ │                                  │  │
+    │ │ Summary                          │  │
+    │ │ Total Spent       500            │  │
+    │ │ Money Remaining   9500           │  │
+    │ │ Status            Within Budget  │  │
+    └────────────────────────────────────────┘
+
+    OPTION B: Right-click → Open with → Excel
+    ┌────────────────────────────────────────┐
+    │ Right-click CSV file                   │
+    │      ↓                                 │
+    │ Open with                              │
+    │      ↓                                 │
+    │ Microsoft Excel                        │
+    │      ↓                                 │
+    │ (opens in Excel)                       │
+    └────────────────────────────────────────┘
+
+    OPTION C: Use Google Sheets
+    ┌────────────────────────────────────────┐
+    │ 1. Go to sheets.google.com             │
+    │ 2. File → Open                         │
+    │ 3. Click Upload tab                    │
+    │ 4. Select CSV file                     │
+    │ 5. (automatically opens in Sheets)     │
+    └────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      OPTIONAL: CREATE CHARTS IN EXCEL                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    In Excel:
+    ┌─────────────────────────────────┐
+    │ Select Data                     │
+    │     ↓                           │
+    │ Insert Chart                    │
+    │     ↓                           │
+    │ ┌───────────────────────────┐   │
+    │ │     SPENDING BY CATEGORY  │   │
+    │ │                           │   │
+    │ │  Food: 500                │   │
+    │ │  ────────────────         │   │
+    │ │                           │   │
+    │ │  Travel: 1500             │   │
+    │ │  ────────────────────     │   │
+    │ │                           │   │
+    │ │  Other: 200               │   │
+    │ │  ──────                   │   │
+    │ └───────────────────────────┘   │
+    │                                 │
+    │ Or Pie Chart:                   │
+    │        ╭─────╮                  │
+    │      ╱           ╲              │
+    │    ╱  Food        ╲             │
+    │   │   (25%)   Travel│           │
+    │   │          (75%)  │           │
+    │    ╲               ╱            │
+    │      ╲           ╱              │
+    │        ╰─────╯                  │
+    │                                 │
+    │ Print or Share!                 │
+    └─────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    COMPLETE WORKFLOW SUMMARY                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Budget Analyser Running
+         ↓
+    [Option 1] Add Transactions
+         ↓ (Data in RAM)
+    [Option 7] Generate Monthly Report
+         ↓
+    Display on Screen + Create CSV File
+         ↓ (CSV saved to disk)
+    Monthly_Report_2026-10.csv created
+         ↓
+    Double-click or Right-click → Open
+         ↓
+    Opens in Excel
+         ↓
+    View, Analyze, Share!
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                          KEY DIFFERENCES                                   ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  OPTION 6: Monthly Analysis                                               ║
+║  ────────────────────────                                                 ║
+║  • Shows report on screen only                                            ║
+║  • No CSV file created                                                    ║
+║  • Data lost when program closes                                          ║
+║  • Good for quick checking                                                ║
+║                                                                            ║
+║  ────────────────────────────────────────                                 ║
+║                                                                            ║
+║  OPTION 7: Generate Monthly Report (text)                                 ║
+║  ────────────────────────────────────────                                 ║
+║  • Shows report on screen                                                 ║
+║  • CSV file created automatically                                         ║
+║  • Data saved permanently to disk                                         ║
+║  • Can be emailed, shared, imported                                       ║
+║  • Professional format for record-keeping                                 ║
+║  • Recommended for permanent reports                                      ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                        FILE NAMING CONVENTION                              ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  Monthly_Report_2026-09.csv    ← September 2026                           ║
+║  Monthly_Report_2026-10.csv    ← October 2026                             ║
+║  Monthly_Report_2026-11.csv    ← November 2026                            ║
+║  Monthly_Report_2025-01.csv    ← January 2025                             ║
+║                                                                            ║
+║  Pattern: Monthly_Report_YYYY-MM.csv                                      ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         QUICK START GUIDE                                  ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  1. Run Budget Analyser                                                   ║
+║  2. Add transactions (Option 1)                                           ║
+║  3. Select Option 7                                                       ║
+║  4. Enter month (e.g., 2026-10)                                           ║
+║  5. CSV file created automatically                                        ║
+║  6. Find CSV in same folder as program                                    ║
+║  7. Double-click to open in Excel                                         ║
+║  8. Analyze and share!                                                    ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

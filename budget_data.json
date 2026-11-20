@@ -1,0 +1,11 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "category": "Food",
+      "amount": 1000.0,
+      "month": "2026-10"
+    }
+  ],
+  "monthly_budget": 10000.0
+}

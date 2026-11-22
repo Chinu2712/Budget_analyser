@@ -133,6 +133,9 @@ while True:
 
     elif choice == "3":
         search_word = input("Enter a category to search for: ").strip().lower()
+        if not search_word:
+            print("Please enter a category to search for.")
+            continue
         found = False
 
         for transaction in transactions:
